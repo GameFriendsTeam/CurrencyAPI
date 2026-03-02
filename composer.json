@@ -2,7 +2,7 @@
     "name": "savin1play140/currencyapi",
     "type": "project",
     "require": {
-        "pocketmine/pocketmine-mp": "^5.0.0",
+        "pocketmine/pocketmine-mp": "^5.41.0",
         "muqsit/simple-packet-handler": "^0.1.6",
         "jojoe77777/formapi": "dev-master",
         "cortexpe/commando": "dev-master"

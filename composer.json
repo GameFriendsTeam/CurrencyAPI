@@ -3,9 +3,9 @@
     "type": "project",
     "require": {
         "pocketmine/pocketmine-mp": "^5.0.0",
-        "muqsit/simple-packet-handler": "^0.1.5",
+        "muqsit/simple-packet-handler": "^0.1.6",
         "jojoe77777/formapi": "dev-master",
-        "paroxity/commando": "^3.2"
+        "cortexpe/commando": "dev-master"
     },
     "license": "GPL-3.0",
     "autoload": {
@@ -13,7 +13,8 @@
             "gmp\\eco\\": "src/"
         },
         "classmap": [
-            "vendor/jojoe77777/formapi/src"
+            "vendor/jojoe77777/formapi/src",
+            "vendor/cortexpe/commando/src"
         ]
     },
     "repositories": [
@@ -25,6 +26,17 @@
                 "dist": {
                     "type": "zip",
                     "url": "https://github.com/jojoe77777/FormAPI/archive/refs/heads/master.zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "cortexpe/commando",
+                "version": "dev-master",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/CortexPE/Commando/archive/refs/heads/master.zip"
                 }
             }
         }

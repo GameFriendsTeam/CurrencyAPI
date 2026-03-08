@@ -10,6 +10,7 @@ Two-way economic A.P.I. to create currencies on the one hand, and on the other t
     - [x] Currency buy/sell limit
     - [x] Saving player balance to SQL database
     - [x] Saving currency price to SQL database
+    - [ ] Scoredoard placenoder
 
 # For create currency
 Main:
@@ -83,3 +84,4 @@ $count = $player->get($currencyName);
  - add <count: float> [player: string] operators only
  - remove <count: float> [player: string] operators only
  - transaction <count: float> <player: string> all players <br>
+

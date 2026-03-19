@@ -54,16 +54,10 @@ final class API {
 		self::$cm = new CurrencyManager($this);
 		self::$pm = new PlayerManager($this);
 
-		$logger->info("Config file: ".($this->main->getDataFolder()."settings.yml"));
-
 		$database = self::$api_config->get("database");
-
-		$logger->info("Database type: ".$database["type"]);
 		if ($database["type"] == "sqlite") {
 			$logger->info("Database file: ".$this->main->getDataFolder().$database["sqlite"]["file"]);
 		} elseif ($database["type"] == "mysql") {
-			$logger->info("Database host: ".$database["mysql"]["host"]);
-			$logger->info("Database user: ".$database["mysql"]["username"]);
 		}
 
 		self::$lang = new Config(
@@ -102,11 +96,6 @@ final class API {
 		if(!PacketHooker::isRegistered()) {
 			PacketHooker::register($this->main);
 		}
-
-		$logger->info("Configured language: ".self::$api_config->get("lang", "EN_US"));
-		$logger->info("CoinIO coefficient for \"Buy\": ".self::$api_config->get("coin_coff_buy", 0.01));
-		$logger->info("CoinIO coefficient for \"Sell\": ".self::$api_config->get("coin_coff_sell", 0.01));
-
 	}
 
 

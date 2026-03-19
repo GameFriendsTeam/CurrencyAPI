@@ -1,5 +1,5 @@
 <?php
-namespace gmp\eco;
+namespace gft\cur;
 
 use pocketmine\event\player\{
 	PlayerJoinEvent, PlayerMoveEvent,
@@ -10,8 +10,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 
-use gmp\eco\player\{Player, OfflinePlayer};
-use gmp\eco\util\SQL;
+use gft\cur\player\{Player, OfflinePlayer};
+use gft\cur\util\SQL;
 use Exception;
 use Error;
 use pocketmine\utils\SingletonTrait;

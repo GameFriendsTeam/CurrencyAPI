@@ -1,10 +1,10 @@
 <?php
-namespace gmp\eco\player;
+namespace gft\cur\player;
 
 use pocketmine\player\OfflinePlayer as OPlayer;
 use pocketmine\nbt\tag\CompoundTag;
-use gmp\eco\util\SQL;
-use gmp\eco\API;
+use gft\cur\util\SQL;
+use gft\cur\API;
 
 class OfflinePlayer extends OPlayer {
 	private ?API $api = null;

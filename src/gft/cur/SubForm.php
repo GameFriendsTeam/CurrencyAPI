@@ -1,9 +1,9 @@
 <?php
-namespace gmp\eco;
+namespace gft\cur;
 
-use gmp\eco\player\Player;
-use gmp\eco\event\{BuyEvent, SellEvent};
-use gmp\eco\currency\{Currency};
+use gft\cur\player\Player;
+use gft\cur\event\{BuyEvent, SellEvent};
+use gft\cur\currency\{Currency};
 use jojoe77777\FormAPI\CustomForm;
 
 final class SubForm {
@@ -15,7 +15,7 @@ final class SubForm {
 
 		$form = new CustomForm(
 			function (Player $sender, ?array $data) use ($currency, $sing) {
-				/** @var \gmp\eco\player\Player $sender */
+				/** @var \gft\cur\player\Player $sender */
 				if(is_null($data)) return;
 				if (!$currency->isSalable()) {
 					$sender->sendMessage("You can't sell");

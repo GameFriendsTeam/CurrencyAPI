@@ -1,4 +1,4 @@
 <?php
-namespace gmp\eco\event;
+namespace gft\cur\event;
 
 class SellEvent extends RemoveEvent {}

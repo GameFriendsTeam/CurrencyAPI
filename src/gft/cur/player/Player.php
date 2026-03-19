@@ -1,5 +1,5 @@
 <?php
-namespace gmp\eco\player;
+namespace gft\cur\player;
 
 use pocketmine\network\mcpe\NetworkSession;
 use pocketmine\player\Player as PPlayer;
@@ -10,9 +10,9 @@ use pocketmine\entity\Location;
 use pocketmine\utils\Config;
 use pocketmine\Server;
 
-use gmp\eco\event\{AddEvent, RemoveEvent, SetEvent, TransactionEvent};
-use gmp\eco\util\SQL;
-use gmp\eco\API;
+use gft\cur\event\{AddEvent, RemoveEvent, SetEvent, TransactionEvent};
+use gft\cur\util\SQL;
+use gft\cur\API;
 use Exception;
 use Error;
 

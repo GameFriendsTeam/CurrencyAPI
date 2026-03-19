@@ -1,10 +1,10 @@
 <?php
-namespace gmp\eco\event;
+namespace gft\cur\event;
 
 use pocketmine\event\Event;
 use pocketmine\event\Cancellable;
-use gmp\eco\player\Player;
-use gmp\eco\currency\Currency;
+use gft\cur\player\Player;
+use gft\cur\currency\Currency;
 use pocketmine\event\CancellableTrait;
 
 class AddEvent extends Event implements Cancellable {

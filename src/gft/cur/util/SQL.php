@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace gmp\eco\util;
+namespace gft\cur\util;
 
 class SQL {
 	private $pdo;

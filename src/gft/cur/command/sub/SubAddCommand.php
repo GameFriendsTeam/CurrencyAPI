@@ -1,5 +1,5 @@
 <?php
-namespace gmp\eco\command\sub;
+namespace gft\cur\command\sub;
 
 use CortexPE\Commando\BaseSubCommand;
 use CortexPE\Commando\args\{RawStringArgument, FloatArgument};
@@ -8,16 +8,16 @@ use pocketmine\command\{Command, CommandSender};
 use pocketmine\permission\DefaultPermissions;
 use pocketmine\Server;
 
-use gmp\eco\player\Player;
-use gmp\eco\{API, Form, PluginEP};
-use gmp\eco\currency\Currency;
+use gft\cur\player\Player;
+use gft\cur\{API, Form, PluginEP};
+use gft\cur\currency\Currency;
 
-class SubRemoveCommand extends BaseSubCommand {
+class SubAddCommand extends BaseSubCommand {
 	public function __construct(
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct("remove", "remove from balance currency");
+		parent::__construct("add", "add to balance currency");
 		$this->setPermission(DefaultPermissions::ROOT_OPERATOR);
 	}
 
@@ -37,25 +37,29 @@ class SubRemoveCommand extends BaseSubCommand {
 				$sender->sendMessage("§l§cPlayer not found online");
 			}
 		}
-		if (!$target instanceof Player) return;
+
+		if(!$sender instanceof \gft\cur\player\Player){
+			//Assertion Fault
+			return;
+		}
+
+		if(!$target instanceof \gft\cur\player\Player){
+			//Assertion Fault
+			return;
+		}
+
 		if (isset($args["count"])) {
 			$count = $args["count"];
 		} else {
 			$this->sendUsage();
 			return;
 		}
-
-		if(!$sender instanceof \gmp\eco\player\Player){
-			//Assertion Fault
-			return;
-		}
-
-		$target->remove($this->currency->getName(), $count);
+		$target->add($this->currency->getName(), $count);
 		$sender->sendMessage(
 			str_replace(
 				["{count}", "{sing}", "{balance}"],
-				[(string)$count, $this->currency->getSing(), (string)$sender->get($this->currency->getName())],
-				API::getLang()->getNested("player.remove")
+				[$count, $this->currency->getSing(), (string) $sender->get($this->currency->getName())],
+				API::getLang()->getNested("player.add")
 			)
 		);
 	}

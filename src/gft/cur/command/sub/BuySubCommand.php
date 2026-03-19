@@ -1,12 +1,12 @@
 <?php
-namespace gmp\eco\command\sub;
+namespace gft\cur\command\sub;
 
 use CortexPE\Commando\BaseSubCommand;
 use CortexPE\Commando\args\{RawStringArgument, FloatArgument};
 use pocketmine\command\{CommandSender};
 use pocketmine\permission\DefaultPermissions;
-use gmp\eco\{API, PluginEP};
-use gmp\eco\currency\Currency;
+use gft\cur\{API, PluginEP};
+use gft\cur\currency\Currency;
 
 class BuySubCommand extends BaseSubCommand {
 	public function __construct(
@@ -32,7 +32,7 @@ class BuySubCommand extends BaseSubCommand {
 			return;
 		}
 
-		if(!$sender instanceof \gmp\eco\player\Player){
+		if(!$sender instanceof \gft\cur\player\Player){
 			//Assertion Fault
 			return;
 		}

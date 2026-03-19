@@ -13,7 +13,7 @@
 # Для создания валюты
 Main:
 ```php
-use gmp\eco\API;
+use gft\cur\API;
 
 	/* ... */
 		API::getCurrencyManager()->registerCurrency($main->getName(), new YourCurrency());
@@ -25,7 +25,7 @@ Your Currency:
 <?php
 namespace your\plugin\space;
 
-use gmp\eco\currency\Currency;
+use gft\cur\currency\Currency;
 
 class YourCurrency implements Currency {
 	public function getPrice(): float {
@@ -54,7 +54,8 @@ class YourCurrency implements Currency {
 ```
 # Для использования экономической стороны
 Для пополнения баланса:
-```php
+```php
+
 $target->add($currencyName, $count);
 ```
 Для вычита с баланса:

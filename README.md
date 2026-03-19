@@ -15,7 +15,7 @@ Two-way economic A.P.I. to create currencies on the one hand, and on the other t
 # For create currency
 Main:
 ```php
-use gmp\eco\API;
+use gft\cur\API;
 
 	/* ... */
 		API::getCurrencyManager()->registerCurrency($main->getName(), new YourCurrency());
@@ -27,7 +27,7 @@ Your Currency:
 <?php
 namespace your\plugin\space;
 
-use gmp\eco\currency\Currency;
+use gft\cur\currency\Currency;
 
 class YourCurrency implements Currency {
 	public function getPrice(): float {

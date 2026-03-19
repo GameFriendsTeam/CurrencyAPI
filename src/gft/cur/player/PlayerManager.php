@@ -1,7 +1,7 @@
 <?php
-namespace gmp\eco\player;
+namespace gft\cur\player;
 
-use gmp\eco\API;
+use gft\cur\API;
 
 class PlayerManager {
 	private array $offlinePlayers = [];

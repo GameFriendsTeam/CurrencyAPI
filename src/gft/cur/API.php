@@ -1,10 +1,10 @@
 <?php
-namespace gmp\eco;
+namespace gft\cur;
 
 use pocketmine\utils\Config;
-use gmp\eco\currency\{Dollar, CoinIO, CurrencyManager};
-use gmp\eco\player\PlayerManager;
-use gmp\eco\player\Player;
+use gft\cur\currency\{Dollar, CoinIO, CurrencyManager};
+use gft\cur\player\PlayerManager;
+use gft\cur\player\Player;
 use CortexPE\Commando\PacketHooker;
 
 final class API {

@@ -1,5 +1,5 @@
 {
-    "name": "savin1play140/currencyapi",
+    "name": "gamefriendsteam/currencyapi",
     "type": "project",
     "require": {
         "pocketmine/pocketmine-mp": "^5.0.0",
@@ -10,7 +10,7 @@
     "license": "GPL-3.0",
     "autoload": {
         "psr-4": {
-            "gmp\\eco\\": "src/"
+            "gft\\cur\\": "src/"
         },
         "classmap": [
             "vendor/jojoe77777/formapi/src",

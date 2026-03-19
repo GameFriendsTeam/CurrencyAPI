@@ -1,5 +1,5 @@
 <?php
-namespace gmp\eco\currency;
+namespace gft\cur\currency;
 
 class Dollar implements Currency {
 	public function getPrice(): float { return 1.0; }

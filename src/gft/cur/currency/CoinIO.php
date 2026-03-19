@@ -1,6 +1,6 @@
 <?php
-namespace gmp\eco\currency;
-use gmp\eco\API;
+namespace gft\cur\currency;
+use gft\cur\API;
 
 class CoinIO implements Currency {
 	private float $price = 100.0;

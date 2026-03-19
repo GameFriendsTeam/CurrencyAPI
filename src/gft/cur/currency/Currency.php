@@ -1,5 +1,5 @@
 <?php
-namespace gmp\eco\currency;
+namespace gft\cur\currency;
 
 interface Currency {
 	public function getPrice(): float;

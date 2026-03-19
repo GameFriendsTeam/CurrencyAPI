@@ -1,11 +1,11 @@
 <?php
-namespace gmp\eco\currency;
+namespace gft\cur\currency;
 
-use gmp\eco\command\CurrencyCommand;
+use gft\cur\command\CurrencyCommand;
 use pocketmine\Server;
-use gmp\eco\util\SQL;
-use gmp\eco\API;
-use gmp\eco\PluginEP;
+use gft\cur\util\SQL;
+use gft\cur\API;
+use gft\cur\PluginEP;
 
 class CurrencyManager {
 	private array $currencies = [];

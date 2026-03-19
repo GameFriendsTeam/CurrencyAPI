@@ -6,7 +6,7 @@ namespace gft\cur\util;
 class SQL {
 	private $pdo;
 	private $type;
-	private $table = 'data';
+	private $table = 'currencyapi_data';
 	private $buffer = [];
 	private $initialized = false;
 

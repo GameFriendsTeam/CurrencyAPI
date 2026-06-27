@@ -76,7 +76,7 @@ jobs:
       - name: Execute build
         run: |
           mkdir -p build
-          ./bin/php7/bin/php compiler.php
+          php compiler.php
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

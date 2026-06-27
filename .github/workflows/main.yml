@@ -74,7 +74,9 @@ jobs:
           pm-version-major: 5
 
       - name: Execute build
-        run: php compiler.php
+        run: |
+          mkdir -p build
+          ./bin/php7/bin/php compiler.php
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

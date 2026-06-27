@@ -76,7 +76,7 @@ jobs:
       - name: Execute build
         run: |
           mkdir -p build
-          php compiler.php
+          php -d phar.readonly=0 compiler.php
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

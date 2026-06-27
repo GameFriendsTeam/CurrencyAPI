@@ -65,9 +65,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      
-      -name : execute build
+
+      - name: Setup PHP
         uses: pmmp/setup-php-action@3.2.0
+        with:
+          php-version: "8.3"
+          install-path: "./bin"
+          pm-version-major: 5
+
+      - name: Execute build
         run: php compiler.php
 
       - name: Create GitHub Release
